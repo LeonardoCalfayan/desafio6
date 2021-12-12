@@ -1,0 +1,13 @@
+
+/* Clases Auxiliares que se reutilizan en varios contenedores */
+
+.tituloSeccion{
+    font-size: $tamanoFuenteSecundario;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.textoGenerico{
+    font-size: $tamanoFuenteGeneral;
+    text-align: center;
+}

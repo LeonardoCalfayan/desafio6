@@ -1,0 +1,19 @@
+html {
+    font-size: 62.5%;
+    }
+
+    *{  /* reseteo gral*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+    /* background-color: F9F3DF; + Gradiente*/
+
+body{
+    background-color: $colorFondoGeneral;
+    background: linear-gradient(90deg, rgba(255,221,237,1) 0%, rgba(250,235,223,1) 20%, rgba(250,235,223,1) 80%, rgba(255,221,237,1) 100%);
+    font-family: 'Playfair Display', serif;
+    color: $colorTexto;
+}

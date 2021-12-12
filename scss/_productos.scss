@@ -1,0 +1,302 @@
+/* CARROUSEL */
+
+#carouselProductos{
+    width:40%;
+    margin: 0 auto;
+}
+
+
+
+/* PRODUCTOS DESTACADOS */
+
+@keyframes destacar{
+
+    0%{color: rgb(247, 159, 203); }
+    50%{transform: scale(1.5);
+        color:#CF2F87}
+    100%{transform: scale(1);;
+        color: rgb(247, 159, 203) }    
+}
+
+.productosDestacados{
+   
+    width:100%;
+    margin:20px 0px;
+    height: 1050px;
+    /*Hago flex el contenedor del título para que con la animación no se exceda el ancho total de la pantalla*/
+    &Title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h2{
+            animation-name: destacar;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-duration: 3s;
+            animation-delay: 1s;
+        }
+    }
+
+    &Cards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2%;
+        row-gap: 2%;
+        justify-items: center;
+        align-items:center;
+    
+        grid-template-areas: 
+        "card1 card2 card3"
+        "card4 card5 card6"
+        
+    }
+
+    &__card{
+    
+        display:flex;
+        flex-direction: column;
+        margin: 20px 50px;
+        padding: 20px 20px;
+        background-color: #FDE2E2;
+        background: radial-gradient(circle, rgba(246,222,244,1) 21%, rgba(251,195,195,0.7530199579831933) 50%, rgba(246,222,244,1) 81%);
+        width: 300px;
+        height: 400px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        border: 3px solid #a0966e;
+        border-radius: 3%;
+        transition: all 1s;
+        &:hover{
+            transform: scale(1.1);
+        }
+        &__foto{
+            height: 350px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            overflow: hidden;        
+        }
+
+    }
+
+
+}
+
+/* Ubicacion y fondo de las Product Card */
+
+
+/*Product Card en index.html*/
+
+#cookies{
+    grid-area: card1;
+    div{
+        background-image: url(../images/galletaCraquelada.jpg);
+    }
+}
+
+
+
+#cupcakes{
+    grid-area: card2;
+    div{
+        background-image: url(../images/cupCake.jpg);
+    }
+}
+
+
+#cakePops{
+    grid-area: card3;
+    div{
+        background-image: url(../images/cakePop.jpg);
+    }
+}
+ 
+#chocolates{
+    grid-area: card4;
+    div{
+        background-image: url(../images/bombonesChocolate.jpg);
+    }
+
+}
+
+#fechasEspeciales{
+    grid-area: card5;
+    div{
+        background-image: url(../images/torta23.jpg);
+    }    
+}
+
+#giftCard{
+    grid-area: card6;
+    div{
+        background-image: url(../images/giftCard.png);
+    }
+}
+
+
+/*Product Card en tortasDecoradas.html*/
+
+#circo{
+    grid-area: card1;
+    div{
+        background-image: url(../images/tortaCirco.jpg);
+    }
+}
+
+
+#naturaleza{
+    grid-area: card2;
+    div{
+        background-image: url(../images/tortaFlores.jpg);
+    }
+}
+
+#bautismoY1{
+    grid-area: card3;
+    div{
+        background-image: url(../images/tortaBautismo.jpg);
+    }
+}
+
+#bodas{
+    grid-area: card4;
+    div{
+        background-image: url(../images/tortaBoda.jpg);
+    }
+}
+
+#quince{
+    grid-area: card5;
+    div{
+        background-image: url(../images/torta15.jpg);
+    }
+}
+
+
+#giftCard{
+    grid-area: card6;
+    div{
+        background-image: url(../images/giftCard.png);
+    }
+}
+
+/*Product Card en pasteleriaTradicional.html*/
+
+#tartaFrutillas{
+    grid-area: card1;
+    div{
+        background-image: url(../images/tortaFrutilla.jpg);
+    }
+}
+
+
+#tartaChocolate{
+    grid-area: card2;
+    div{
+        background-image: url(../images/tortaChocolate.jpg);
+    }
+}
+
+#tartaDurazno{
+    grid-area: card3;
+    div{
+        background-image: url(../images/tortaDurazno.jpg);
+    }
+}
+
+#galletasDecoradas{
+    grid-area: card4;
+    div{
+        background-image: url(../images/galletaBicicletaH300.jpg);
+    }
+}
+
+#galletasCraqueladas{
+    grid-area: card5;
+    div{
+        background-image: url(../images/galletaCraquelada.jpg);
+    }
+}
+
+
+#galletasPastillaje{
+    grid-area: card6;
+    div{
+        background-image: url(../images/galletaFlores.jpg);
+    }
+}
+
+/*Product Card en rinconSalado.html*/
+
+#fosforitos{
+    grid-area: card1;
+    div{
+        background-image: url(../images/fosforitos.jpg);
+    }
+}
+
+
+#brusquetas{
+    grid-area: card2;
+    div{
+        background-image: url(../images/brusquetas.jpg);
+    }
+}
+
+#canapes{
+    grid-area: card3;
+    div{
+        background-image: url(../images/canapes.jpg);
+    }
+}
+
+#empanadasArabes{
+    grid-area: card4;
+    div{
+        background-image: url(../images/lehmeyun.jpg);
+    }
+}
+
+#pizzetas{
+    grid-area: card5;
+    div{
+        background-image: url(../images/pizzetas.jpg);
+    }
+}
+
+
+#empanadasCopetin{
+    grid-area: card6;
+    div{
+        background-image: url(../images/empanadasCopetin.jpg);
+    }
+}
+
+/*FORMULARIOS*/
+
+.formulario{
+    width:100%;
+    height: 50vh;
+    display: flex;
+    padding: 10px 10px;
+    &Izquierdo{
+        width:40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    &Derecho{
+        width:60%;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+}

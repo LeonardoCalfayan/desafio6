@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="../estilos.css">
-    <title>PasteLou</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>PasteLou - Rincón Salado</title>
 </head>
 <body>
     <header class="header">
@@ -20,7 +20,7 @@
             <div class = "headerLogo">
                 <a href="../index.html"> <img src="../images/logoPasteLou.jpg" alt="Logo PasteLou"> </a><!-- Icon principal con link a index.html-->
             </div>
-            <div class="headerTituloTexto">
+            <div id="headerTituloTexto" class="animate__animated animate__fadeInDown">
                 <h1> PasteLou </h1>
                 <h2> Pastelería Artesanal </h2> 
             </div>     
@@ -47,71 +47,75 @@
 
     </header>
 
-    <section>
-        <!--Productos 1-->
-        <h2> Salados </h2>
-            <article>
-                <img src="../images/fosforitos.jpg" alt="Product Card 1">
-                <p>Fosforitos</p>
+    <section class="productosDestacados">
+    
+        <h2 class="tituloSeccion"> Rincón Salado </h2>
 
-                <img src="../images/brusquetas.jpg" alt="Product Card 2">
-                <p>Brusquetas</p>
-                
-                <img src="../images/canapes.jpg" alt="Product Card 3">
-                <p>Canapes</p>   
+        <div class="productosDestacadosCards">
+
+            <article id="fosforitos" class="productosDestacados__card">
+                <div  class="productosDestacados__card__foto"> </div>
+                <h3> Fosforitos </h3>    
+            </article>
+            <article id="brusquetas" class="productosDestacados__card">
+                <div class="productosDestacados__card__foto"></div>
+                <h3> Brusquetas </h3>    
+            </article>
+            <article id="canapes" class="productosDestacados__card">
+                <div class="productosDestacados__card__foto"></div>
+                <h3> Canapes </h3>    
+            </article>
+
+    
+            <article id="empanadasArabes" class="productosDestacados__card">
+                <div  class="productosDestacados__card__foto"> </div>
+                <h3> Empanadas Arabes </h3>    
+            </article>
+            <article id="pizzetas" class="productosDestacados__card">
+                <div class="productosDestacados__card__foto"></div>
+                <h3> Pizzetas </h3>    
+            </article>
+            <article id="empanadasCopetin" class="productosDestacados__card">
+                <div class="productosDestacados__card__foto"></div>
+                <h3> Empanadas de Copetín </h3>    
             </article>
 
     </section>
-
-
+    
     <section>
-        <!--Productos 2-->
-        <h2> Salados </h2>
-            <article>
-                <img src="../images/lehmeyun.jpg" alt="Product Card 1">
-                <p>Empanadas Arabes</p>
+        <form class="formulario textoGenerico" action="/" method="post">
+            <div class="formularioIzquierdo"> 
+                <div class="formularioItem">  
+                    <legend class="tituloSeccion"> Elegí la torta que mas te guste</legend>
+                    <fieldset>
+                        <select name="">
+                            <option value="fosforitos">Fosforitos de jamón y queso</option>
+                            <option value="brusquetas">Bruequetas</option>
+                            <option value="canapes">Canapes</option>
+                            <option value="lehmeyun">Empenadas Arabes</option>
+                            <option value="pizzetas">Pizzetas</option>
+                            <option value="empanadasCopetín">Empanadas de Copetín</option>
+                        </select>
+                </div>
+                <div class="formularioItem">        
+                    <label for="">Apto celíaco </label>
+                    <input type="checkbox" name="sinTaac" value="1" />
+                </div>
+                <div class="formularioItem"> 
+                    <label for="">Box Chico (6u)</label>
+                    <input type="radio" name="tamano" value="chico" />
+                    <label for="">Box Mediano (12u)</label>
+                    <input type="radio" name="tamano" value="mediano" />
+                    <label for="">Box Grande (18u)</label>
+                    <input type="radio" name="tamano" value="grande" />
+                </div> 
+                </div>
+                <div class="formularioDerecho"> 
+                    <textarea name="textarea" rows="5" cols="30">Comentanos algún detalle especial para tu pedido</textarea>
 
-                <img src="../images/pizzetas.jpg" alt="Product Card 2">
-                <p>Pizzetas</p>
-                
-                <img src="../images/empanadasCopetin.jpg" alt="Product Card 3">
-                <p>Empanadas de Copetín</p>
-           </article>
-
-    </section>
-
-    <section>
-        <form action="/" method="post">
-            <legend> Elegí la torta que mas te guste</legend>
-            <fieldset>
-                <select name="">
-                    <option value="fosforitos">Fosforitos de jamón y queso</option>
-                    <option value="brusquetas|">Bruequetas</option>
-                    <option value="canapes">Canapes</option>
-                    <option value="lehmeyun">Empenadas Arabes</option>
-                    <option value="pizzetas">Pizzetas</option>
-                    <option value="empanadasCopetín">Empanadas de Copetín</option>
-                </select>
-                <br> 
-                <br>
-                <label for="">Apto celíaco </label>
-                <input type="checkbox" name="sinTaac" value="1" />
-                <br>
-                <br>
-                <label for="">Box Chico (6u)</label>
-                <input type="radio" name="tamano" value="chico" />
-                <label for="">Box Mediano (12u)</label>
-                <input type="radio" name="tamano" value="mediano" />
-                <label for="">Box Grande (18u)</label>
-                <input type="radio" name="tamano" value="grande" />
-                <br>
-                <br>
-                <textarea name="textarea" rows="10" cols="50">Comentanos algún detalle especial para tu pedido</textarea>
-                <br>
-                <br>
-                <input type="submit" value="Agregar al Carrito">
-                <input type="reset" value="Borrar pedido">
-
+                    <input type="submit" value="Agregar al Carrito">
+                    <input type="reset" value="Borrar pedido">
+                </div>  
 
 
 

@@ -1,0 +1,118 @@
+/* Utilizo criterio Desktop First para los Media Query */
+
+/* 1do MQ para pasar grid de productos de 3 columnas a 2 columnas y 3 filas cuando desaparece una card*/
+
+@media screen and (max-width: 1200px){
+
+    .productosDestacados{
+
+        height: 1550px;
+        &Cards{
+     
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            column-gap: 2%;
+            row-gap: 5%;
+            grid-template-areas: 
+            "card1 card2" 
+            "card3 card4" 
+            "card5 card6"
+            
+        }
+    
+    }
+    
+
+}
+
+/* 2er MQ para corregir solapamiento de elementos nav bar con su borde */
+
+@media screen and (max-width: 1065px){
+    // .headerMenu ul{
+    //     flex-direction: column;
+    //     li{
+    //         margin-bottom: 15px;
+    //     }
+    // }
+    // Eliminado x utilizar NAV de Bootstrap Responsive
+    .mapaFormularioContacto{
+
+        flex-direction: column;
+    }  
+}
+
+/* 3er MQ para pasar grid de productos de 2 columnas a 1 columna y 6 filas cuando desaparece otra card*/
+
+@media screen and (max-width: 780px){
+
+    .productosDestacados{
+
+        height: 3400px;
+        &Cards{
+            /* height: 80%; */
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                column-gap: 2%;
+                row-gap: 5%;
+                grid-template-areas: 
+                "card1" 
+                "card2" 
+                "card3"
+                "card4" 
+                "card5"
+                "card6"
+            
+        }
+    }
+
+    .formulario{
+       
+        height: auto;
+        flex-direction: column;
+        padding: 20px 10px;
+        &Izquierdo{
+            width:100%;
+    
+        }
+        &Derecho{
+            width:100%;
+
+        }
+        
+    }
+
+    .sobreNosotrosItem{
+            flex-direction: column;
+   
+    }
+}
+
+/* 4to MQ (Vista Mobile) para ubicar todo el contenido en forma vertical cuando se empieza a solapar el conenido del Header */
+
+@media screen and (max-width: 550px){
+
+    .headerTitle{
+        flex-direction: column;
+    
+    }
+    
+    .nosotros{
+        flex-direction: column;
+        height:fit-content;
+    }
+
+    #nosotros{
+        width: 100%;
+        padding:50px 30px;
+    }
+    
+    #nuestraTienda{
+        width: 100%;
+       
+  
+    }
+}

@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="../estilos.css">
-    <title>PasteLou</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>PasteLou - Pastelería Tradicional</title>
 </head>
 <body>
     <header class="header">
@@ -20,7 +20,7 @@
             <div class = "headerLogo">
                 <a href="../index.html"> <img src="../images/logoPasteLou.jpg" alt="Logo PasteLou"> </a><!-- Icon principal con link a index.html-->
             </div>
-            <div class="headerTituloTexto">
+            <div id="headerTituloTexto" class="animate__animated animate__fadeInDown">
                 <h1> PasteLou </h1>
                 <h2> Pastelería Artesanal </h2> 
             </div>     
@@ -47,67 +47,74 @@
 
     </header>
 
-    <section>
-        <!--Productos 1-->
+    
+    <section class="productosDestacados">
+    
         <h2 class="tituloSeccion"> Pastelería Tradicional </h2>
-            <article>
-                <img src="../images/tortaFrutilla.jpg" alt="Product Card 1">
-                <p>Tarta de frutillas con crema</p>
 
-                <img src="../images/tortaChocolate.jpg" alt="Product Card 2">
-                <p>Tarta de mouse de chocolate</p>
-                
-                <img src="../images/tortaDurazno.jpg" alt="Product Card 3">
-                <p>Tarta de durazno</p>   
+        <div class="productosDestacadosCards">
+
+            <article id="tartaFrutillas" class="productosDestacados__card">
+                <div  class="productosDestacados__card__foto"> </div>
+                <h3> Tarta de frutillas con crema </h3>    
+            </article>
+            <article id="tartaChocolate" class="productosDestacados__card">
+                <div class="productosDestacados__card__foto"></div>
+                <h3> Tarta de mouse de chocolate </h3>    
+            </article>
+            <article id="tartaDurazno" class="productosDestacados__card">
+                <div class="productosDestacados__card__foto"></div>
+                <h3> Tarta de durazno </h3>    
             </article>
 
+    
+            <article id="galletasDecoradas" class="productosDestacados__card">
+                <div  class="productosDestacados__card__foto"> </div>
+                <h3> Galletas decoradas </h3>    
+            </article>
+            <article id="galletasCraqueladas" class="productosDestacados__card">
+                <div class="productosDestacados__card__foto"></div>
+                <h3> Galletas craqueladas </h3>    
+            </article>
+            <article id="galletasPastillaje" class="productosDestacados__card">
+                <div class="productosDestacados__card__foto"></div>
+                <h3> Galletas decoradas con pastillaje </h3>    
+            </article>
+        </div>
     </section>
-
-
+       
     <section>
-        <!--Productos 2-->
-        <h2> Pastelería Tradicional </h2>
-            <article>
-                <img src="../images/galletaBicicleta.jpg" alt="Product Card 1">
-                <p>Galletas decoradas</p>
-
-                <img src="../images/galletaCraquelada.jpg" alt="Product Card 2">
-                <p>Galletas craqueladas</p>
+        <form class="formulario textoGenerico" action="/" method="post">
+            <div class="formularioIzquierdo"> 
                 
-                <img src="../images/galletaFlores.jpg" alt="Product Card 3">
-                <p>Galletas decoradas con pastillaje</p>
-           </article>
+                <div class="formularioItem">  
+                    <legend class="tituloSeccion"> Elegí lo que más te guste de nuestra Pastelería Tradicional</legend>
+                    
+                    <fieldset>
+                        <select name="">
+                            <option value="tartaFrutillas">Tarta de Frutillas con crema</option>
+                            <option value="tartaChocolate">Tarta mouse de chocolate</option>
+                            <option value="tartaDurazno">Tarta de Durazno</option>
+                            <option value="galletasDecoradas">Galletas con decoración pintadas</option>
+                            <option value="galletasCraqueladas">Galletas Craqueladas</option>
+                            <option value="galletasFlores">Galletas decoradas con pastillaje</option>
+                        </select>
+                    </div>
+                <div class="formularioItem">
+                    <label for="sinTacc">Apto celíaco </label>
+                    <input type="checkbox" name="sinTacc" value="1" />
+                </div>
+                <div class="formularioItem">        
+                    <label for="cantidad">Cantidad</label>
+                    <input id="cantidad" type="number" placeholder="Cantidad">
+                </div> 
+                </div>
+                <div class="formularioDerecho">  
+                    <textarea name="textarea" rows="5" cols="30">Comentanos algún detalle especial para tu pedido</textarea>
 
-    </section>
-
-    <section>
-        <form action="/" method="post">
-            <legend> Elegí la torta que mas te guste</legend>
-            <fieldset>
-                <select name="">
-                    <option value="tartaFrutillas">Tarta de Frutillas con crema</option>
-                    <option value="tartaChocolate">Tarta mouse de chocolate</option>
-                    <option value="tartaDurazno">Tarta de Durazno</option>
-                    <option value="galletasDecoradas">Galletas con decoración pintadas</option>
-                    <option value="galletasCraqueladas">Galletas Craqueladas</option>
-                    <option value="galletasFlores">Galletas decoradas con pastillaje</option>
-                </select>
-                <br> 
-                <br>
-                <label for="sinTacc">Apto celíaco </label>
-                <input type="checkbox" name="sinTacc" value="1" />
-                <br>
-                <br>
-                <label for="cantidad">Cantidad</label>
-                <input id="cantidad" type="number" placeholder="Cantidad">
-                <br>
-                <br>
-                <textarea name="textarea" rows="10" cols="50">Comentanos algún detalle especial para tu pedido</textarea>
-                <br>
-                <br>
-                <input type="submit" value="Agregar al Carrito">
-                <input type="reset" value="Borrar pedido">
-
+                    <input type="submit" value="Agregar al Carrito">
+                    <input type="reset" value="Borrar pedido">
+                </div>     
 
 
 
